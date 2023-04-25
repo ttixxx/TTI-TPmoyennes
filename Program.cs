@@ -69,7 +69,7 @@ namespace TPMoyennes
 
             // Calcul la moyenne d'un eleve dans chaque matière 6eme A
             double cumul = 0;
-            int nbe = 0;
+            double nbe = 0;
             for (int ieleve = 0; ieleve < sixiemeA.eleves.Count; ieleve++)
             {
                 for (int matiere = 0; matiere < sixiemeA.matieres.Count; matiere++)
