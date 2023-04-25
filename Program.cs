@@ -77,15 +77,15 @@ namespace TPMoyennes
                     for (int inote = 0; inote < Eleve.notes.Count; inote++)
                     {
                         nbe++;
-                        cumul += Note[i];
+                        cumul += Note.note[i];
 
-                      if (nbe = 5)
-                      {
+                        if (nbe = 5)
+                        {
                             Moyenne.Eleve.matiere = cumul / 5;
                             nbe = 0;
                             cumul = 0;
 
-                      }
+                        }
 
                     }
                 }
@@ -113,11 +113,11 @@ namespace TPMoyennes
             // Calcul la moyenne de la classe dans une matière (est 
             // la moyenne des moyennes de tous les élèves dans la matière) 
 
-            for (int iclasse = 0; iclasse < classes.Count; iclasse++)
+            for (int iclasse = 0; iclasse < Classe.classes.Count; iclasse++)
             {
-                for (int matiere = 0; matiere < matieres.Count; matiere++)
+                for (int matiere = 0; matiere < Note.matieres.Count; matiere++)
                 {
-                    for (int ieleve = 0; ieleve < eleves.Count; ieleve++)
+                    for (int ieleve = 0; ieleve < Eleve.eleves.Count; ieleve++)
                     {
 
                         nbe++;
@@ -139,7 +139,7 @@ namespace TPMoyennes
             // La moyenne générale de la classe (est la moyenne 
             //  des moyennes de la classe par matière)
 
-            for (int iclasse = 0; iclasse < classes.Count; ieleve++)
+            for (int iclasse = 0; iclasse < Classe.classes.Count; iclasse++)
             {
                 for (int matiere = 0; matiere < matieres.Count; matiere++)
                 {
@@ -154,7 +154,7 @@ namespace TPMoyennes
                         cumul = 0;
                  }
 
-                    
+                   
                 }
             }
 

@@ -11,6 +11,9 @@ namespace TPMoyennes
     {
         public int matiere { get; private set; }
         public float note { get; private set; }
+
+        string[] matieres = new string[4];
+
         public Note(int m, float n)
         {
             matiere = m;

@@ -10,10 +10,10 @@ namespace TPMoyennes
     public class Eleve
     {
 
-        public string nom { get; private set; }
-        public string prenom { get; private set; }
-        public float Moyenne { get; private set; }
-        public float MoyenneG { get; private set; }
+        public string nom { get; }
+        public string prenom { get; }
+        public static double Moyenne;
+        public static double MoyenneG; 
         
         // constructeur
         public Eleve(string lenom, string leprenom, float lamoy)
@@ -23,15 +23,25 @@ namespace TPMoyennes
             Moyenne = lamoy;
 
         }
+
+        internal void ajouterNote(string note)
+        {
+            throw new NotImplementedException();
+        }
+
+
+
+
+
+
         
-        // Association de classe Eleve et classe
-        private List<Note> Notes;
+        public List<Note> Notes;
         public Note(int m, float n)
         {
             Notes = new List<Note>();
         }
 
-
+        var notes = new List<string>();
 
 
     }

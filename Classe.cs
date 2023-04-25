@@ -10,41 +10,45 @@ namespace TPMoyennes
     public class Classe
     { 
       
-        public float MoyenneC { get; private set; }
-        public float MoyenneCm { get; private set; }
-
-        // Association de classe Eleve et classe
-
-        private List<Eleve> Eleves;
-        public Eleve(string lenom, string leprenom, float lamoy)
+        public float MoyenneC
         {
-            Eleves = new List<Eleve>();
+            get { return 0; }
+            internal set { }   // CS0273
+                               // try the following line instead
+                               // private set {}
+        }
+        public float MoyenneCm
+        {
+            get { return 0; }
+            internal set { }   // CS0273
+                               // try the following line instead
+                               // private set {}
+        }
+
+        
+
+        public  List<Eleve> eleves;
+        
+
+        public ConsoleCancelEventArgs(string lenom, string leprenom, float lamoy)
+        {
+            eleves = new List<Eleve>();
+      
         }
 
 
 
 
-        // création d'une liste d'élève par classe
-        var listeleve = new List<string> { }
 
-        // création d'une liste d'élève par classe
-        var listemat = new List<string> { }
-
-        // Description des méthodes
-        public void ajouterEleve()
+        internal void ajouterEleve(string prenom, string nom)
         {
-         listeleve.Add();
-
-        }
-        public void ajouterMatiere()
-        {
-         listemat.Add();
-
+            throw new NotImplementedException();
         }
 
-
-
-
+        internal void ajouterMatiere(string matiere)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
